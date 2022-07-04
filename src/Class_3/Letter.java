@@ -11,14 +11,22 @@ public class Letter {
         Random random = new Random();
 
         String name = scanner.nextLine();
-        String[] mass = {"A","B","C","D","E","F"};
+        String[] mass = {"A","B","C","D","E","F","G"};
         int i = random.nextInt(mass.length);
         String name1 = mass[i];
 
         System.out.println(name1);
 
-        if(name == name1){
-            System.out.println("You're the Winner");
+        for (int j = 0; j < mass.length; j++) {
+            if (name.equals(mass[j])){
+                System.out.println("Position of the entered letter = " + j);
+            }
+        }
+
+
+
+        if(name.equals(name1)) {
+            System.out.println("You're the Winner!!!!!!");
         }
 
     }
