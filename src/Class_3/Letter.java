@@ -23,8 +23,6 @@ public class Letter {
             }
         }
 
-
-
         if(name.equals(name1)) {
             System.out.println("You're the Winner!!!!!!");
         }

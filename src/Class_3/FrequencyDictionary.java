@@ -16,5 +16,13 @@ public class FrequencyDictionary {
             }
         }
         System.out.println("The Word \"Hello\" - " + sum);
+
+        int sum1 =0;
+        for (int i = 0; i < sentence.length; i++) {
+            if(word2.equals(sentence[i])) {
+                sum1++;
+            }
+        }
+        System.out.println("The Word \"World\" - " + sum1);
     }
 }
