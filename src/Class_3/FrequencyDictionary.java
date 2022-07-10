@@ -1,5 +1,8 @@
 package Class_3;
 
+//Задание: Написать частотный словарь -
+// посчитать сколько раз каждое слово встречается в предложении и вывести результат в консоль.
+
 import java.util.Arrays;
 
 public class FrequencyDictionary {
@@ -17,6 +20,7 @@ public class FrequencyDictionary {
                 }
             }
             System.out.println("This word - " + sentenceArray[i] + " - occurs - " + sum + " - times in the sentence!");
+            sum=0;
         }
     }
 }
