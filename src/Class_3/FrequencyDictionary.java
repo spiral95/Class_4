@@ -1,28 +1,23 @@
 package Class_3;
 
+import java.util.Arrays;
+
 public class FrequencyDictionary {
 
     public static void main(String[] args) {
-        String[] sentence = {"Hello", "World", "Hello", "World","Hello", "World","Hello", "World","Hello", "World"};
 
-        String word1 = "Hello";
-        String word2 = "World";
+        String sentence = "I love using Java because it is such an elegant language with so many purposes and such a bright future";
+        String[] sentenceArray = sentence.split(" +");
 
-
-        int sum =0;
-        for (int i = 0; i < sentence.length; i++) {
-            if(word1.equals(sentence[i])) {
+        int sum = 1;
+        for (int k = 1, i = 0; k < sentenceArray.length; k++) {
+            if (sentenceArray[i].equals(sentenceArray[k])) {
                 sum++;
+            } else {
+                sum = 1;
+                i++;
             }
+            System.out.println("This word - " + sentenceArray[i] + " - occurs - " + sum + " - times in the sentence!");
         }
-        System.out.println("The Word \"Hello\" - " + sum);
-
-        int sum1 =0;
-        for (int i = 0; i < sentence.length; i++) {
-            if(word2.equals(sentence[i])) {
-                sum1++;
-            }
-        }
-        System.out.println("The Word \"World\" - " + sum1);
     }
 }
