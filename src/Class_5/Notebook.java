@@ -31,7 +31,6 @@ public class Notebook {
 
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        String result = new String();
         Dictionary(number);
     }
 }
