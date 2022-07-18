@@ -13,8 +13,6 @@ public class RecordWords {
                     "insta post - 2",
                     "finish project"};
 
-    static String[] offer = new String[records.length];
-
     public static String method1(String word) {
 
         int k = 0;
@@ -29,6 +27,9 @@ public class RecordWords {
         }
         return Arrays.toString(offer);
     }
+
+    static String[] offer = new String[records.length];// Есть вопрос!!! Здесь по хорошему нужно вставить k - как
+                                                       // длину массива. Но здесь k - не видно.
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
