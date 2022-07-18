@@ -28,8 +28,8 @@ public class RecordWords {
         return Arrays.toString(offer);
     }
 
-    static String[] offer = new String[records.length];// Есть вопрос!!! Здесь по хорошему нужно вставить k - как
-                                                       // длину массива. Но здесь k - не видно.
+    static String[] offer = new String[records.length];// Есть вопрос!!! Как сделать так, чтобы не выводились
+                                                       // нулевые строки.
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
