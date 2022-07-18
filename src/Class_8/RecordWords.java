@@ -2,6 +2,7 @@ package Class_8;
 
 //Задание: Создать метод, возвращающий все записи в которых содержится переданное слово.
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RecordWords {
@@ -26,7 +27,7 @@ public class RecordWords {
                 }
             }
         }
-        return offer[k];
+        return Arrays.toString(offer);
     }
 
     public static void main(String[] args) {
