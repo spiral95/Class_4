@@ -14,7 +14,6 @@ public class RecordWords {
                     "finish project"};
 
     public static String method1(String word) {
-
         int k = 0;
         for (int i = 0; i < records.length; i++) {
             String[] words = records[i].split(" +");
