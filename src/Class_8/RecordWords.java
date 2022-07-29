@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class RecordWords {
 
-    static String[] records =
+    public static String[] records =
                    {"insta post",
                     "blog backup",
                     "insta post - 2",
