@@ -16,5 +16,4 @@ public class Plus<T> {
             System.out.println(plus.method("Test") + integerPlus.method(10));
         }
 
-    }
 }
