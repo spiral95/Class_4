@@ -1,5 +1,8 @@
 package Tasks;
 
+// Задание: Создать список учеников с помощью ArrayList, заполнить случайными оценками. Удалить неудовлетворительные
+// оценки из списка.
+
 import java.util.ArrayList;
 
 public class Task_29 {
