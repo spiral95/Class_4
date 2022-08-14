@@ -2,24 +2,25 @@ package Library_Console;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
-public class Library extends Book {
+public class Library2 extends Book {
 
-    public Library(int id, String name, String ganre) {
+    public Library2(int id, String name, String ganre) {
         super(id, name, ganre);
     }
 
-    static ArrayList<Book> books = new ArrayList<Book>();
+    ArrayList<Book> books = new ArrayList<Book>();
 // Создаём пустой список книг
 
-    public static void addBook(Object Book) {
-        if (getId() != getId()) {
-            books.add(new Book(getId(), getName(), getGanre()));
+    public void addBook(Book book) {
+        if (this.getId() != getId()) {
+            books.add(book);
         }
     }
 // Создали метод, добавляющий объект Книга в ArrayList
 
-    public static void getBook() {
+    public void getBook() {
         for (Book book : books) {
             System.out.println(book);
         }
@@ -33,27 +34,29 @@ public class Library extends Book {
     }
 // Создали метод, удаляющий из списка книгу по id
 
-    public void setBook(int index, Object Book) {
+    public void setBook(int index, Book book) {
         for (int i = 0; i < books.size(); i++) {
             if(i == index){
-                books.set(i, new Book(getId(), getName(), getGanre()));
+                books.set(i, book);
             }
         }
     }
 
         public static void main (String[]args){
 
-        ArrayList<Book> library = new ArrayList<Book>();
+            ArrayList<Book> library = new ArrayList<Book>();
 
             Random rand = new Random();
+            Scanner scanner = new Scanner(System.in);
             int id = rand.nextInt(100);
+
+
             Book book1 = new Book(id, "Java 8 Polnoe rukovodstvo - 2015", "Educational literature");
             Book book2 = new Book(id, "Prestuplenie i nakazanie", "Classical literature");
             Book book3 = new Book(id, "Rich Dad Poor Dad", "Classical literature");
 
-            addBook(book1);
-            addBook(book2);
-            addBook(book3);
+// Вопрос - почему метод не получается применить здесь??????
+            library.addBook(book1);
             System.out.println(library);
 
 
