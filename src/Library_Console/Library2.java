@@ -1,8 +1,6 @@
 package Library_Console;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Library2 extends Book {
 
@@ -10,7 +8,7 @@ public class Library2 extends Book {
         super(id, name, ganre);
     }
 
-    ArrayList<Book> books = new ArrayList<Book>();
+    List<Book> books = new ArrayList<Book>();
 // Создаём пустой список книг
 
     public void addBook(Book book) {
@@ -41,6 +39,7 @@ public class Library2 extends Book {
             }
         }
     }
+    // Создали метод, редактирующий книгу по индексу
 
         public static void main (String[]args){
 
@@ -48,16 +47,43 @@ public class Library2 extends Book {
 
             Random rand = new Random();
             Scanner scanner = new Scanner(System.in);
-            int id = rand.nextInt(100);
+//            int id = rand.nextInt(100);
 
-
-            Book book1 = new Book(id, "Java 8 Polnoe rukovodstvo - 2015", "Educational literature");
-            Book book2 = new Book(id, "Prestuplenie i nakazanie", "Classical literature");
-            Book book3 = new Book(id, "Rich Dad Poor Dad", "Classical literature");
+            Book book1 = new Book(rand.nextInt(100), "Java 8 Polnoe rukovodstvo - 2015", "Educational literature");
+            Book book2 = new Book(rand.nextInt(100), "Prestuplenie i nakazanie", "Classical literature");
+            Book book3 = new Book(rand.nextInt(100), "Rich Dad Poor Dad", "Classical literature");
 
 // Вопрос - почему метод не получается применить здесь??????
-            library.addBook(book1);
-            System.out.println(library);
+//            library.addBook(book1);
+//            library.addBook(book2);
+//            library.addBook(book3);
+            library.add(book1);
+            library.add(book2);
+            library.add(book3);
+            System.out.println(library.toString());
+
+// Вопрос - почему метод не получается применить здесь??????
+//            library.getBook();
+            for (Book books : library) {
+                System.out.println(books);
+            }
+            Collections.sort(library, new Comparator<Book>() {
+                @Override
+                public int compare(Book o1, Book o2) {
+                    return o1.getName().compareTo(o2.getName());
+                }
+            });
+            for (Book books: library) {
+                System.out.println(books);
+            }
+
+// Вопрос - почему метод не получается применить здесь??????
+//            library.removeBook(book1.getId());
+            library.remove(book1.getId());
+
+            for (Book books : library) {
+                System.out.println(books);
+            }
 
 
         }

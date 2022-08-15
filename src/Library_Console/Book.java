@@ -1,6 +1,11 @@
 package Library_Console;
 
-public class Book {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+class Book {
 
     private int id;
     private String name;
@@ -24,8 +29,11 @@ public class Book {
         this.name = name;
         this.ganre = ganre;
     }
-
 // Создали конструктор класса Book, содержащий все заданные переменные.
-}
 
+    @Override
+    public String toString() {
+        return id + ": " + name  + ", -" + ganre;
+    }
+}
 
